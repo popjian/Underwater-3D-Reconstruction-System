@@ -1,0 +1,60 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("DenseReconstruction")
+        MainWindow.resize(694, 438)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(20, 10, 101, 31))
+        self.pushButton.setObjectName("pushButton")
+        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit.setGeometry(QtCore.QRect(130, 10, 191, 31))
+        self.textEdit.setObjectName("textEdit")
+        # Save medium result
+        self.textEdit2 = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit2.setGeometry(QtCore.QRect(130, 20, 191, 31))
+        self.textEdit2.setObjectName("textEdit2")
+        self.textEdit2.hide()  # Hide the QTextEdit widget by default
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(340, 10, 101, 31))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3.setGeometry(QtCore.QRect(460, 10, 101, 31))
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_4.setGeometry(QtCore.QRect(580, 10, 101, 31))
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
+        self.groupBox.setGeometry(QtCore.QRect(20, 50, 661, 81))
+        self.groupBox.setObjectName("groupBox")
+        self.pushButton_5 = QtWidgets.QPushButton(self.groupBox)
+        self.pushButton_5.setGeometry(QtCore.QRect(60, 20, 101, 31))
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.pushButton_6 = QtWidgets.QPushButton(self.groupBox)
+        self.pushButton_6.setGeometry(QtCore.QRect(280, 20, 101, 31))
+        self.pushButton_6.setObjectName("pushButton_6")
+        self.listWidget = QtWidgets.QListWidget(self.centralwidget)
+        self.listWidget.setGeometry(QtCore.QRect(50, 150, 411, 192))
+        self.listWidget.setAutoScrollMargin(17)
+        self.listWidget.setObjectName("listWidget")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("DenseReconstruction", "DenseReconstruction"))
+        self.pushButton.setText(_translate("DenseReconstruction", "稠密重建数据"))
+        self.pushButton_2.setText(_translate("DenseReconstruction", "数据保存路径"))
+        self.pushButton_3.setText(_translate("DenseReconstruction", "数据格式转换"))
+        self.pushButton_4.setText(_translate("DenseReconstruction", "稠密三维重建"))
+        self.groupBox.setTitle(_translate("DenseReconstruction", "GroupBox"))
+        self.pushButton_5.setText(_translate("DenseReconstruction", "转换图片名"))
+        self.pushButton_6.setText(_translate("DenseReconstruction", "掩码图"))
+
